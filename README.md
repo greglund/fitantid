@@ -18,3 +18,5 @@ If you have agreed to download the FIT SDK, copy all files from the c/ subfolder
 - Ensure that the utility is in your path, or that your command prompt is in the directory holding the executable.
 - From your command prompt or terminal window, simply type fitantid <.fit file>
 
+## Download
+https://github.com/greglund/fitantid/releases
