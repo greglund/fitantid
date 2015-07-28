@@ -19,6 +19,6 @@ limitations under the License.
 
 #define REVISION_RELEASE               0
 #define REVISION_MAJOR                 0
-#define REVISION_MINOR                 1
+#define REVISION_MINOR                 2
 
 #endif // !defined(_REVISION_H_)

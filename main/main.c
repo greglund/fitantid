@@ -423,17 +423,21 @@ static bool main_decode_file(FILE* in)
                         }
 
                         printf("\n");
+                        printf("Device Serial Number:  ");
 
                         if (info_mesg.serial_number != FIT_UINT32Z_INVALID)
-                        {
-                           printf("Device Serial Number:  %lu\n", (unsigned long int) info_mesg.serial_number);
-                           printf("ANT ID:  %u\n", (int) (uint16_t) info_mesg.serial_number);
-                        }
+                           printf("%lu\n", (unsigned long int) info_mesg.serial_number);
                         else
-                        {
-                           printf("Device Serial Number:  UNKNOWN\n");
-                           printf("ANT ID:  UNKNOWN\n");
-                        }
+                           printf("UNKNOWN\n");
+
+                        printf("ANT ID:  ");
+
+                        if (info_mesg.ant_device_number != FIT_UINT16Z_INVALID)
+                           printf("%u\n", info_mesg.ant_device_number);
+                        else if (info_mesg.serial_number != FIT_UINT32Z_INVALID)
+                           printf("%u (from serial number)\n", (unsigned int) (uint16_t) info_mesg.serial_number);
+                        else
+                           printf("UNKNOWN\n");
                      }
                      break;
 
