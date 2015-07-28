@@ -12,7 +12,7 @@ https://github.com/greglund/fitantid/releases
 - From your command prompt or terminal window, simply type fitantid <.fit file>
 
 ## Building from source
-This project requires gcc and has been tested on Windows, OS X and Ubuntu.  Mingw is required for the Windows buid.  It should work on any other Unix as well.
+This project Makefile requires gcc and has been tested on Windows, OS X and Ubuntu.  It should work on any other Unix as well.  Mingw or Cygwin is required for the Windows build.
 
 This project requires the FIT SDK, available from http://www.thisisant.com/resources/fit.  Due to license restrictions, you will need to agree to the licence for the FIT SDK, and acquire the source on your own accord.
 
