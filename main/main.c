@@ -37,7 +37,7 @@ static const struct
 } main_manufacturers[] =
 {
    {"GARMIN", 1},
-   {"GARMIN FR405 ANTFS", 2},
+   {"GARMIN_FR405_ANTFS", 2}, // Do not use.  Used by FR405 for ANTFS man id.
    {"ZEPHYR", 3},
    {"DAYTON", 4},
    {"IDT", 5},
@@ -45,10 +45,10 @@ static const struct
    {"QUARQ", 7},
    {"IBIKE", 8},
    {"SARIS", 9},
-   {"SPARK HK", 10},
+   {"SPARK_HK", 10},
    {"TANITA", 11},
    {"ECHOWELL", 12},
-   {"DYNASTREAM OEM", 13},
+   {"DYNASTREAM_OEM", 13},
    {"NAUTILUS", 14},
    {"DYNASTREAM", 15},
    {"TIMEX", 16},
@@ -56,54 +56,54 @@ static const struct
    {"XELIC", 18},
    {"BEURER", 19},
    {"CARDIOSPORT", 20},
-   {"A AND D", 21},
+   {"A_AND_D", 21},
    {"HMM", 22},
    {"SUUNTO", 23},
-   {"THITA ELEKTRONIK", 24},
+   {"THITA_ELEKTRONIK", 24},
    {"GPULSE", 25},
-   {"CLEAN MOBILE", 26},
-   {"PEDAL BRAIN", 27},
+   {"CLEAN_MOBILE", 26},
+   {"PEDAL_BRAIN", 27},
    {"PEAKSWARE", 28},
    {"SAXONAR", 29},
-   {"LEMOND FITNESS", 30},
+   {"LEMOND_FITNESS", 30},
    {"DEXCOM", 31},
-   {"WAHOO FITNESS", 32},
-   {"OCTANE FITNESS", 33},
+   {"WAHOO_FITNESS", 32},
+   {"OCTANE_FITNESS", 33},
    {"ARCHINOETICS", 34},
-   {"THE HURT BOX", 35},
-   {"CITIZEN SYSTEMS", 36},
+   {"THE_HURT_BOX", 35},
+   {"CITIZEN_SYSTEMS", 36},
    {"MAGELLAN", 37},
    {"OSYNCE", 38},
    {"HOLUX", 39},
    {"CONCEPT2", 40},
-   {"ONE GIANT LEAP", 42},
-   {"ACE SENSOR", 43},
-   {"BRIM BROTHERS", 44},
+   {"ONE_GIANT_LEAP", 42},
+   {"ACE_SENSOR", 43},
+   {"BRIM_BROTHERS", 44},
    {"XPLOVA", 45},
-   {"PERCEPTION DIGITAL", 46},
+   {"PERCEPTION_DIGITAL", 46},
    {"BF1SYSTEMS", 47},
    {"PIONEER", 48},
    {"SPANTEC", 49},
    {"METALOGICS", 50},
    {"4IIIIS", 51},
-   {"SEIKO EPSON", 52},
-   {"SEIKO EPSON OEM", 53},
-   {"IFOR POWELL", 54},
-   {"MAXWELL GUIDER", 55},
-   {"STAR TRAC", 56},
+   {"SEIKO_EPSON", 52},
+   {"SEIKO_EPSON_OEM", 53},
+   {"IFOR_POWELL", 54},
+   {"MAXWELL_GUIDER", 55},
+   {"STAR_TRAC", 56},
    {"BREAKAWAY", 57},
-   {"ALATECH TECHNOLOGY LTD", 58},
-   {"MIO TECHNOLOGY EUROPE", 59},
+   {"ALATECH_TECHNOLOGY_LTD", 58},
+   {"MIO_TECHNOLOGY_EUROPE", 59},
    {"ROTOR", 60},
    {"GEONAUTE", 61},
-   {"ID BIKE", 62},
+   {"ID_BIKE", 62},
    {"SPECIALIZED", 63},
    {"WTEK", 64},
-   {"PHYSICAL ENTERPRISES", 65},
-   {"NORTH POLE ENGINEERING", 66},
+   {"PHYSICAL_ENTERPRISES", 65},
+   {"NORTH_POLE_ENGINEERING", 66},
    {"BKOOL", 67},
    {"CATEYE", 68},
-   {"STAGES CYCLING", 69},
+   {"STAGES_CYCLING", 69},
    {"SIGMASPORT", 70},
    {"TOMTOM", 71},
    {"PERIPEDAL", 72},
@@ -111,7 +111,7 @@ static const struct
    {"MOXY", 76},
    {"CICLOSPORT", 77},
    {"POWERBAHN", 78},
-   {"ACORN PROJECTS APS", 79},
+   {"ACORN_PROJECTS_APS", 79},
    {"LIFEBEAM", 80},
    {"BONTRAGER", 81},
    {"WELLGO", 82},
@@ -119,25 +119,45 @@ static const struct
    {"MAGURA", 84},
    {"WOODWAY", 85},
    {"ELITE", 86},
-   {"NIELSEN KELLERMAN", 87},
-   {"DK CITY", 88},
+   {"NIELSEN_KELLERMAN", 87},
+   {"DK_CITY", 88},
    {"TACX", 89},
-   {"DIRECTION TECHNOLOGY", 90},
+   {"DIRECTION_TECHNOLOGY", 90},
    {"MAGTONIC", 91},
    {"1PARTCARBON", 92},
-   {"INSIDE RIDE TECHNOLOGIES", 93},
-   {"SOUND OF MOTION", 94},
+   {"INSIDE_RIDE_TECHNOLOGIES", 93},
+   {"SOUND_OF_MOTION", 94},
    {"STRYD", 95},
+   {"ICG", 96}, // Indoorcycling Group
+   {"MIPULSE", 97},
+   {"BSX_ATHLETICS", 98},
+   {"LOOK", 99},
+   {"CAMPAGNOLO_SRL", 100},
+   {"BODY_BIKE_SMART", 101},
+   {"PRAXISWORKS", 102},
+   {"LIMITS_TECHNOLOGY", 103}, // Limits Technology Ltd.
+   {"TOPACTION_TECHNOLOGY", 104}, // TopAction Technology Inc.
+   {"COSINUSS", 105},
+   {"FITCARE", 106},
    {"DEVELOPMENT", 255},
    {"HEALTHANDLIFE", 257},
    {"LEZYNE", 258},
-   {"SCRIBE LABS", 259},
+   {"SCRIBE_LABS", 259},
    {"ZWIFT", 260},
    {"WATTEAM", 261},
    {"RECON", 262},
-   {"FAVERO ELECTRONICS", 263},
+   {"FAVERO_ELECTRONICS", 263},
    {"DYNOVELO", 264},
    {"STRAVA", 265},
+   {"PRECOR", 266}, // Amer Sports
+   {"BRYTON", 267},
+   {"SRAM", 268},
+   {"NAVMAN", 269}, // MiTAC Global Corporation (Mio Technology}, 
+   {"COBI", 270}, // COBI GmbH
+   {"SPIVI", 271},
+   {"MIO_MAGELLAN", 272},
+   {"EVESPORTS", 273},
+   {"SENSITIVUS_GAUGE", 274},
    {"ACTIGRAPHCORP", 5759},
 };
 static const struct
@@ -147,28 +167,30 @@ static const struct
 } main_garmin_products[] =
 {
    {"HRM1", 1},
-   {"AXH01", 2},
+   {"AXH01", 2}, // AXH01 HRM chipset
    {"AXB01", 3},
    {"AXB02", 4},
    {"HRM2SS", 5},
    {"DSI_ALF02", 6},
    {"HRM3SS", 7},
-   {"HRM_RUN_SINGLE_BYTE_PRODUCT_ID", 8},
-   {"BSM", 9},
-   {"BCM", 10},
-   {"AXS01", 11},
+   {"HRM_RUN_SINGLE_BYTE_PRODUCT_ID", 8}, // hrm_run model for HRM ANT+ messaging
+   {"BSM", 9}, // BSM model for ANT+ messaging
+   {"BCM", 10}, // BCM model for ANT+ messaging
+   {"AXS01", 11}, // AXS01 HRM Bike Chipset model for ANT+ messaging
+   {"HRM_TRI_SINGLE_BYTE_PRODUCT_ID", 12}, // hrm_tri model for HRM ANT+ messaging
+   {"FR225_SINGLE_BYTE_PRODUCT_ID", 14}, // fr225 model for HRM ANT+ messaging
    {"FR301_CHINA", 473},
    {"FR301_JAPAN", 474},
    {"FR301_KOREA", 475},
    {"FR301_TAIWAN", 494},
-   {"FR405", 717},
-   {"FR50", 782},
+   {"FR405", 717}, // Forerunner 405
+   {"FR50", 782}, // Forerunner 50
    {"FR405_JAPAN", 987},
-   {"FR60", 988},
+   {"FR60", 988}, // Forerunner 60
    {"DSI_ALF01", 1011},
-   {"FR310XT", 1018},
+   {"FR310XT", 1018}, // Forerunner 310
    {"EDGE500", 1036},
-   {"FR110", 1124},
+   {"FR110", 1124}, // Forerunner 110
    {"EDGE800", 1169},
    {"EDGE500_TAIWAN", 1199},
    {"EDGE500_JAPAN", 1213},
@@ -206,8 +228,9 @@ static const struct
    {"FR10_JAPAN", 1688},
    {"EDGE810_JAPAN", 1721},
    {"VIRB_ELITE", 1735},
-   {"EDGE_TOURING", 1736},
+   {"EDGE_TOURING", 1736}, // Also Edge Touring Plus
    {"EDGE510_JAPAN", 1742},
+   {"HRM_TRI", 1743},
    {"HRM_RUN", 1752},
    {"FR920XT", 1765},
    {"EDGE510_ASIA", 1821},
@@ -232,6 +255,7 @@ static const struct
    {"EDGE1000_TAIWAN", 2052},
    {"EDGE1000_JAPAN", 2053},
    {"FR15_JAPAN", 2061},
+   {"EDGE520", 2067},
    {"EDGE1000_CHINA", 2070},
    {"FR620_RUSSIA", 2072},
    {"FR220_RUSSIA", 2073},
@@ -242,20 +266,63 @@ static const struct
    {"FR920XT_JAPAN", 2132},
    {"VIRBX", 2134},
    {"VIVO_SMART_APAC", 2135},
+   {"ETREX_TOUCH", 2140},
+   {"EDGE25", 2147},
+   {"FR25", 2148},
    {"VIVO_FIT2", 2150},
    {"FR225", 2153},
+   {"FR630", 2156},
+   {"FR230", 2157},
    {"VIVO_ACTIVE_APAC", 2160},
    {"VECTOR_2", 2161},
    {"VECTOR_2S", 2162},
    {"VIRBXE", 2172},
    {"FR620_TAIWAN", 2173},
+   {"FR220_TAIWAN", 2174},
+   {"TRUSWING", 2175},
    {"FENIX3_CHINA", 2188},
    {"FENIX3_TWN", 2189},
-   {"SDM4", 10007},
+   {"VARIA_HEADLIGHT", 2192},
+   {"VARIA_TAILLIGHT_OLD", 2193},
+   {"EDGE_EXPLORE_1000", 2204},
+   {"FR225_ASIA", 2219},
+   {"VARIA_RADAR_TAILLIGHT", 2225},
+   {"VARIA_RADAR_DISPLAY", 2226},
+   {"EDGE20", 2238},
+   {"D2_BRAVO", 2262},
+   {"APPROACH_S20", 2266},
+   {"VARIA_REMOTE", 2276},
+   {"HRM4_RUN", 2327},
+   {"VIVO_ACTIVE_HR", 2337},
+   {"VIVO_SMART_GPS_HR", 2347},
+   {"VIVO_SMART_HR", 2348},
+   {"VIVO_MOVE", 2368},
+   {"VARIA_VISION", 2398},
+   {"VIVO_FIT3", 2406},
+   {"FENIX3_HR", 2413},
+   {"INDEX_SMART_SCALE", 2429},
+   {"FR235", 2431},
+   {"OREGON7XX", 2441},
+   {"RINO7XX", 2444},
+   {"NAUTIX", 2496},
+   {"EDGE_820", 2530},
+   {"EDGE_EXPLORE_820", 2531},
+   {"SDM4", 10007}, // SDM4 footpod
    {"EDGE_REMOTE", 10014},
    {"TRAINING_CENTER", 20119},
+   {"CONNECTIQ_SIMULATOR", 65531},
    {"ANDROID_ANTPLUS_PLUGIN", 65532},
-   {"CONNECT", 65534},
+   {"CONNECT", 65534}, // Garmin Connect website
+};
+static const struct
+{
+   const char* product_name;
+   const FIT_UINT16 product_id;
+} main_4iiii_products[] =
+{
+   {"SPORTIIIIS_V100", 1},
+   {"VIIIIVA", 3},
+   {"PRECISION", 7},
 };
 static const struct
 {
@@ -264,22 +331,28 @@ static const struct
 } main_device_types[] =
 {
    {"ANTFS", 1},
-   {"BIKE POWER", 11},
-   {"ENVIRONMENT SENSOR LEGACY", 12},
-   {"MULTI SPORT SPEED DISTANCE", 15},
+   {"BIKE_POWER", 11},
+   {"ENVIRONMENT_SENSOR_LEGACY", 12},
+   {"MULTI_SPORT_SPEED_DISTANCE", 15},
    {"CONTROL", 16},
-   {"FITNESS EQUIPMENT", 17},
-   {"BLOOD PRESSURE", 18},
-   {"GEOCACHE NODE", 19},
-   {"LIGHT ELECTRIC VEHICLE", 20},
-   {"ENV SENSOR", 25},
+   {"FITNESS_EQUIPMENT", 17},
+   {"BLOOD_PRESSURE", 18},
+   {"GEOCACHE_NODE", 19},
+   {"LIGHT_ELECTRIC_VEHICLE", 20},
+   {"ENV_SENSOR", 25},
    {"RACQUET", 26},
-   {"WEIGHT SCALE", 119},
-   {"HEART RATE", 120},
-   {"BIKE SPEED CADENCE", 121},
-   {"BIKE CADENCE", 122},
-   {"BIKE SPEED", 123},
-   {"STRIDE SPEED DISTANCE", 124},
+   {"CONTROL_HUB", 27},
+   {"MUSCLE_OXYGEN", 31},
+   {"BIKE_LIGHT_MAIN", 35},
+   {"BIKE_LIGHT_SHARED", 36},
+   {"EXD", 38},
+   {"BIKE_RADAR", 40},
+   {"WEIGHT_SCALE", 119},
+   {"HEART_RATE", 120},
+   {"BIKE_SPEED_CADENCE", 121},
+   {"BIKE_CADENCE", 122},
+   {"BIKE_SPEED", 123},
+   {"STRIDE_SPEED_DISTANCE", 124},
 };
 
 
@@ -390,6 +463,17 @@ static bool main_decode_file(FILE* in)
                                  if (main_garmin_products[i].product_id == info_mesg.product)
                                  {
                                     printf(" (%s)", main_garmin_products[i].product_name);
+                                    break;
+                                 }
+                              }
+                           }
+                           else if (info_mesg.manufacturer == FIT_MANUFACTURER_4IIIIS)
+                           {
+                              for (i = 0; i < (sizeof(main_4iiii_products) / sizeof(main_4iiii_products[0])); i++)
+                              {
+                                 if (main_4iiii_products[i].product_id == info_mesg.product)
+                                 {
+                                    printf(" (%s)", main_4iiii_products[i].product_name);
                                     break;
                                  }
                               }
