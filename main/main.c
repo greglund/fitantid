@@ -379,7 +379,13 @@ int main(int argc, char* argv[])
       return -1;
    }
 
-   main_decode_file(in);
+   if (!main_decode_file(in))
+   {
+      fprintf(stderr, "\nError in input file.\n");
+      fclose(in);
+      return -1;
+   }
+
    fclose(in);
    return 0;
 }
@@ -387,7 +393,7 @@ int main(int argc, char* argv[])
 
 static void main_usage(void)
 {
-   fprintf(stderr, "\nfitantid\nRevision %03u.%03u.%03u\n\n", REVISION_RELEASE, REVISION_MAJOR, REVISION_MINOR);
+   fprintf(stderr, "\nfitantid\nv%u.%u.%u\n\n", REVISION_MAJOR, REVISION_MINOR, REVISION_PATCH);
    fprintf(stderr, "FitSDK Revision %u.%02u\n\n", FIT_PROFILE_VERSION_MAJOR, FIT_PROFILE_VERSION_MINOR);
    fprintf(stderr, MAIN_USAGE);
 }
@@ -396,12 +402,10 @@ static bool main_decode_file(FILE* in)
 {
    FIT_UINT8 buf[32];
    FIT_CONVERT_RETURN convert_return;
-   bool retval;
    uint32_t size_read;
    bool found_device_info_mesg = false;
 
-   fseek(in, FIT_FILE_HDR_SIZE, SEEK_SET);                  // Skip the header.
-   FitConvert_Init(FIT_FALSE);                              // Don't decode the header.
+   FitConvert_Init(FIT_TRUE);
 
    do
    {
@@ -432,7 +436,7 @@ static bool main_decode_file(FILE* in)
 
                         if (info_mesg.manufacturer != FIT_MANUFACTURER_INVALID)
                         {
-                           printf("Number:  %u", (unsigned int) info_mesg.manufacturer);
+                           printf(" Number:  %u", (unsigned int) info_mesg.manufacturer);
 
                            for (i = 0; i < (sizeof(main_manufacturers) / sizeof(main_manufacturers[0])); i++)
                            {
@@ -537,14 +541,12 @@ static bool main_decode_file(FILE* in)
       } while (convert_return == FIT_CONVERT_MESSAGE_AVAILABLE);
    } while ((size_read != 0) && (convert_return == FIT_CONVERT_CONTINUE));
 
-   if (convert_return == FIT_CONVERT_END_OF_FILE)
-      retval = true;
-   else
-      retval = false;
+   if (convert_return != FIT_CONVERT_END_OF_FILE)
+      return false;
 
    if (!found_device_info_mesg)
       printf("No device information messages found in file\n");
 
-   return retval;
+   return true;
 }
 

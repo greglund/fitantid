@@ -1,7 +1,7 @@
 INC=-I./inc -I./main -I./resource/fit
 LIB=-L./main -L./resource/fit
 CC=gcc
-CFLAGS=--std=gnu99
+CFLAGS=--std=c99
 
 ifdef SystemRoot
 	RM = del /Q
@@ -18,7 +18,7 @@ sources := $(wildcard $(addsuffix *.c,$(subdirs)))
 objects := $(patsubst %.c,%.o,$(sources))
 
 all: $(objects)
-	$(CC) $(CFLAGS) -lm $(INC) $(objects) -o fitantid$(EXT)
+	$(CC) $(CFLAGS) $(INC) $(objects) -o fitantid$(EXT)
 
 .c.o::
 	$(CC) -c $(CFLAGS) $(INC) $< -o $@

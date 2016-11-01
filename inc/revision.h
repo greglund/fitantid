@@ -17,8 +17,8 @@ limitations under the License.
 #if !defined(_REVISION_H_)
 #define _REVISION_H_
 
-#define REVISION_RELEASE               0
-#define REVISION_MAJOR                 2
+#define REVISION_MAJOR                 1
 #define REVISION_MINOR                 0
+#define REVISION_PATCH                 0
 
 #endif // !defined(_REVISION_H_)
