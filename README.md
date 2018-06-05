@@ -4,9 +4,6 @@ Several fitness devices can store activity data in .fit format.
 
 This is a command line utility which can search .fit files for device info messages, and extract ANT IDs and other information.  Note that it actually finds the serial number, which is often used to form the ANT ID.
 
-## Download
-https://github.com/greglund/fitantid/releases
-
 ## Running the command
 - Ensure that the utility is in your path, or that your command prompt is in the directory holding the executable.
 - From your command prompt or terminal window, simply type fitantid <.fit file>
