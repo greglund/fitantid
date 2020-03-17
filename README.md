@@ -11,7 +11,7 @@ This is a command line utility which can search .fit files for device info messa
 ## Building from source
 This project Makefile requires gcc and has been tested on Windows, OS X and Ubuntu.  It should work on any other Unix as well.  Mingw or Cygwin is required for the Windows build.
 
-This project requires the FIT SDK, available from http://www.thisisant.com/resources/fit.  Due to license restrictions, you will need to agree to the licence for the FIT SDK, and acquire the source on your own accord.
+This project requires the FIT SDK, available from http://www.thisisant.com/resources/fit-sdk-beta.  Due to license restrictions, you will need to agree to the licence for the FIT SDK, and acquire the source on your own accord.
 
 If you have agreed to download the FIT SDK, copy all files from the c/ subfolder in the SDK into a folder resource/fit in your copy of the fitantid project.
 - Modify the file named fit_config.h so that the line #define FIT_USE_STDINT_H is not commented out.
