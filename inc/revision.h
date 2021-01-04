@@ -1,5 +1,5 @@
 /*
-Copyright 2015 Greg Lund
+Copyright 2021 Greg Lund
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#if !defined(_REVISION_H_)
-#define _REVISION_H_
+#if !defined(REVISION_H_)
+#define REVISION_H_
 
 #define REVISION_MAJOR                 1
 #define REVISION_MINOR                 0
-#define REVISION_PATCH                 0
+#define REVISION_PATCH                 1
 
-#endif // !defined(_REVISION_H_)
+#endif // !defined(REVISION_H_)
